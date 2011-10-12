@@ -1,0 +1,36 @@
+// ----- / Information / -----
+// Style: Minimal
+// Scope: Forms
+// Author: Jesper Wøldiche
+
+// ----- / Variables / -----
+@libmin-form-color-border : #D7D8D9;
+@libmin-form-color-back : #fff;
+@libmin-form-color-button : #C16131;
+@libmin-form-color-text : #666;
+@libmin-form-padding: 8px 8px;
+
+// ----- / Basic form elements / -----
+input[type=text],
+textarea {
+  border: 1px solid @libmin-form-color-border;
+  background: @libmin-form-color-back;
+  padding: @libmin-form-padding;
+  line-height: 1;
+  color: @libmin-form-color-text;
+  margin: 0;
+}
+
+input[type=submit] {
+  border: none;
+  background: @libmin-form-color-button;
+  padding: 8px 16px;
+  color: #fff;
+  margin: 0;
+}
+
+input[type=submit]:hover {
+  cursor: pointer;
+  background: #D28F3E;
+}
+
