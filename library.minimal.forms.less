@@ -13,6 +13,7 @@
 
 // ----- / Basic form elements / -----
 input[type=text],
+input[type=email],
 input[type=password],
 textarea {
   border: 1px solid @libmin-form-color-border;
@@ -57,6 +58,7 @@ input[type=radio] {
   *margin-top: 0; /* IE6-7 */
   line-height: normal;
   border: none;
+  -webkit-transform-style: flat;
 }
 
 input[type=file] {
@@ -121,6 +123,9 @@ textarea {
       label {
         float: none;
         width: auto;
+        margin-left: @default-spacing/2;
+        font-weight: normal;
+        display: inline;
       }
       .description {
         margin-left: 0;
@@ -156,6 +161,60 @@ textarea {
       *line-height: 1.5; /* IE6-7 */
     }
   }
+
+  // Stacked forms
+  .form-stacked {
+    fieldset {
+      padding-top: @baseline / 2;
+    }
+    legend {
+      padding-left: 0;
+    }
+    label {
+      display: block;
+      float: none;
+      width: auto;
+      font-weight: bold;
+      text-align: left;
+      line-height: 20px;
+      padding-top: 0;
+    }
+    .clearfix {
+      margin-bottom: @baseline / 2;
+      div.input {
+        margin-left: 0;
+      }
+    }
+    .inputs-list {
+      margin-bottom: 0;
+      li {
+        padding-top: 0;
+        label {
+          font-weight: normal;
+          padding-top: 0;
+        }
+      }
+    }
+    .form-text,
+    .form-textarea-wrapper,
+    .description,
+    .form-actions,
+    .item-list,
+    .form-file,
+    .webform-container-inline {
+      margin-left: 0;
+    }
+    .webform-component-radios,
+    .webform-component-checkboxes {
+      margin-left: 0;
+    }
+  }
+  .webform-component,
+  .form-item {
+    margin-bottom: @default-spacing;
+  }
+
+
 }  
   
 // For text that needs to appear as an input but should not be an input
@@ -209,50 +268,3 @@ textarea[readonly] {
 }
 
 
-// Stacked forms
-.form-stacked {
-  fieldset {
-    padding-top: @baseline / 2;
-  }
-  legend {
-    padding-left: 0;
-  }
-  label {
-    display: block;
-    float: none;
-    width: auto;
-    font-weight: bold;
-    text-align: left;
-    line-height: 20px;
-    padding-top: 0;
-  }
-  .clearfix {
-    margin-bottom: @baseline / 2;
-    div.input {
-      margin-left: 0;
-    }
-  }
-  .inputs-list {
-    margin-bottom: 0;
-    li {
-      padding-top: 0;
-      label {
-        font-weight: normal;
-        padding-top: 0;
-      }
-    }
-  }
-  .form-text,
-  .form-textarea-wrapper,
-  .description,
-  .form-actions,
-  .item-list,
-  .form-file,
-  .webform-container-inline {
-    margin-left: 0;
-  }
-}
-.webform-component,
-.form-item {
-  margin-bottom: @default-spacing;
-}
